@@ -22,7 +22,7 @@ main() {
 		add_cookie "$cookie" 1>/dev/null
 	done
 
-	navigate_to 'https://bitbucket.org/illuminet/productivity-accelerator-firebase/pipelines/results/page/1'
+	navigate_to 'https://bitbucket.org/illuminet/<>/pipelines/results/page/1'
 
 	sleep 3
 
