@@ -1,0 +1,4 @@
+#!/bin/bash
+a=$(mktemp)
+tesseract "$1" "$a" 2>/dev/null
+mousepad "$a".txt

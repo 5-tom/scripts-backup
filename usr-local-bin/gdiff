@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+read -p "Run git fetch? (y/n): " fetchyn
+case $fetchyn in
+	y)
+		git fetch
+		;;
+	*)
+		;;
+esac
+
+branch_one=$(git branch -a | sed 's/.*remotes\///' | sed 's/^\s*//' | sed 's/* //' | fzf --prompt="Select branch one: ")
+one=$(git log --pretty=oneline $branch_one | fzf --prompt="Select commit hash from $branch_one : " | cut -d " " -f1)
+branch_two=$(git branch -a | sed 's/.*remotes\///' | sed 's/^\s*//' | sed 's/* //' | fzf --prompt="Select branch two: ")
+two=$(git log --pretty=oneline $branch_two | fzf --prompt="Select commit hash from $branch_two : " | cut -d " " -f1)
+git difftool -t meld -d $one $two
