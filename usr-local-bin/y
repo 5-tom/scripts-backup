@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+set -e
+
+mpva() {
+	read -ep "play with mpv? (y/n): " yn
+	case "$yn" in
+		y)
+			true ;;
+		n)
+			exit ;;
+	esac
+	toplay=$(ls -d ~/Videos/* | fzf --prompt="select file to play: ")
+	mpv "$toplay" --no-keepaspect-window --no-terminal 2>/dev/null &
+}
+
+#'--' flags will fail if variables are double-quoted
+default() {
+	test=$(echo "$(cat ~/Videos/history 2>/dev/null | sort -u)" |\
+	fzf --prompt="search from history?: ")
+	if [ "$test" = "new search" ]
+	then
+		read -ep "new search: " search &&
+		echo "$search" >> ~/Videos/history
+		ytfzf -tL --thumb-viewer=mpv --pages="$1" $search |\
+		xargs yt-dlp -S "height:480" -P "~/Videos"
+		mpva
+	else
+		ytfzf -tL --thumb-viewer=mpv --pages="$1" $test |\
+		xargs yt-dlp -S "height:480" -P "~/Videos"
+		mpva
+	fi
+}
+
+audio() {
+	read -ep "url [audio]: " search &&
+	yt-dlp -x --audio-format mp3 -P "~/Videos" "$search"
+	mpva
+}
+
+video() {
+	read -ep "url: " search &&
+	yt-dlp -S "height:480" -P "~/Videos" "$search"
+	mpva
+}
+
+channel() {
+	test=$(echo "$(cat ~/Videos/history 2>/dev/null | sort -u)" |\
+	fzf --prompt="search from history?: ")
+	if [ "$test" = "new search" ]
+	then
+		read -ep "channel name: " search &&
+		echo "$search" >> ~/Videos/history
+		ytfzf --channel-link=https://youtube.com/c/"$search" |\
+		ytfzf -tL --thumb-viewer=mpv -c invidious-channel |\
+		xargs yt-dlp -S "height:480" -P "~/Videos"
+		mpva
+	else
+		ytfzf --channel-link=https://youtube.com/c/"$test" |\
+		ytfzf -tL --thumb-viewer=mpv -c invidious-channel |\
+		xargs yt-dlp -S "height:480" -P "~/Videos"
+		mpva
+	fi
+}
+
+case "$1" in
+	1|2|4|5)
+		default "$1" ;;
+	-a)
+		audio ;;
+	-v)
+		video ;;
+	-c)
+		channel ;;
+	*)
+#no. of pages
+		default 1 ;;
+esac
