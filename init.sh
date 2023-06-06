@@ -5,8 +5,9 @@ set -e
 #sudo adduser tom sudo
 sudo apt update
 #fuse
-sudo apt install -y libfuse2 gajim gparted qbittorrent xclip zsh
+sudo apt install -y libfuse2 libglib2.0-bin gajim gparted qbittorrent xclip zsh
 sudo chsh -s /bin/zsh tom
+sudo update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 sudo cp scripts/usr-local-bin/* /usr/local/bin
 
 cd $HOME
@@ -28,8 +29,10 @@ source Documents/scripts/yt.sh
 #https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
 #https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/
 #https://addons.mozilla.org/en-GB/firefox/addon/popup-blocker/
+#https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/
+
 #https://addons.mozilla.org/en-GB/firefox/addon/castkodi/
-#https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc
+#	https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc
 
 while read
 do
