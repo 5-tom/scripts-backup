@@ -1,0 +1,9 @@
+#!/bin/bash
+
+case "$1" in
+	-l)
+		file_to_play="$2" ;;
+	*)
+		file_to_play="$(fzf)" ;;
+esac
+test $file_to_play && nohup mpv --no-keepaspect-window --no-terminal "$file_to_play" &>/dev/null & disown
