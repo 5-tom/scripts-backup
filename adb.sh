@@ -30,4 +30,5 @@ echo "SUBSYSTEM==\\"usb\\", ATTR{idVendor}==\\""$vid"\\", ATTR{idProduct}==\\""$
 sudo udevadm control --reload-rules
 echo "re-plug your device"
 EOF
-sudo mv adb-fix /usr/local/bin
+chmod +x adb-fix
+sudo mv adb-fix $HOME/Documents/scripts/usr-local-bin

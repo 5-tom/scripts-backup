@@ -7,6 +7,7 @@ sudo snap install codium --classic
 /snap/bin/codium --install-extension esbenp.prettier-vscode --force
 /snap/bin/codium --install-extension moalamri.inline-fold --force
 sudo ln -sn /var/lib/snapd/desktop/applications/codium* /usr/share/applications/
+echo "/snap/bin/codium --install-extension ow.vscode-subword-navigation-1.2.0.vsix --force"
 
 while read
 do

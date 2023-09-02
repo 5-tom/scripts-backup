@@ -38,6 +38,7 @@ while read
 do
 	printf '%s\n' "$REPLY"
 done <<'EOF' >> .zshrc
+alias vpn='sshuttle -r root@filmsbytom.com -x filmsbytom.com 0/0'
 alias cat='batcat --paging=never'
 alias wip='curl -s https://icanhazip.com'
 alias pipe='echo -n "|" | xclip -selection c'
