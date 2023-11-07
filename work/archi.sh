@@ -2,8 +2,8 @@
 set -e
 cd $HOME
 
-wget "https://www.archimatetool.com/downloads/archi.php?/4.10.0/Archi-Linux64-4.10.0.tgz"
-tar -xvf *Archi-Linux64-4.10.0.tgz
+wget "https://www.archimatetool.com/downloads/archi-5.php?/5.1.0/Archi-Linux64-5.1.0.tgz"
+tar -xvf *Archi-Linux64-5.1.0.tgz
 while read
 do
 	printf '%s\n' "$REPLY"

@@ -5,7 +5,7 @@ set -e
 #sudo adduser tom sudo
 sudo apt update
 #fuse
-sudo apt install -y bat libfuse2 libglib2.0-bin gajim gparted qbittorrent xclip zsh
+sudo apt install -y bat libfuse2 libglib2.0-bin gparted qbittorrent xclip zsh
 sudo chsh -s /bin/zsh tom
 sudo update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 #sudo cp scripts/usr-local-bin/* /usr/local/bin
@@ -38,7 +38,8 @@ while read
 do
 	printf '%s\n' "$REPLY"
 done <<'EOF' >> .zshrc
-alias vpn='sshuttle -r root@filmsbytom.com -x filmsbytom.com 0/0'
+alias number='khard | grep Myself'
+#alias vpn='sshuttle -r root@filmsbytom.com -x filmsbytom.com 0/0'
 alias cat='batcat --paging=never'
 alias wip='curl -s https://icanhazip.com'
 alias pipe='echo -n "|" | xclip -selection c'
@@ -52,7 +53,10 @@ function getemoji() {
 alias emoji="getemoji"
 alias forgot='echo "#khal new --interactive, DD-MM-YY HH:MM DD-MM-YY HH:MM
 #task add <> due:DD-MM-YY
-#khard new"'
+#khard new
+#mpv --http-header-fields
+#ffmpeg -headers \"\$(cat headers)\"
+"'
 #-f pulse -i x
 alias record="ffmpeg -video_size $(xdpyinfo | awk '/dimensions/ {print $2}') -framerate 30 -f x11grab -i :0.0 $(openssl rand -hex 20).mp4"
 #export PROMPT_COMMAND="history -a; history -n"#What does this do?
