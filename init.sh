@@ -5,7 +5,7 @@ set -e
 #sudo adduser tom sudo
 sudo apt update
 #fuse
-sudo apt install -y bat libfuse2 libglib2.0-bin gparted qbittorrent xclip zsh
+sudo apt install -y bat fonts-noto-color-emoji libfuse2 libglib2.0-bin gparted qbittorrent xclip zsh
 sudo chsh -s /bin/zsh tom
 sudo update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 #sudo cp scripts/usr-local-bin/* /usr/local/bin

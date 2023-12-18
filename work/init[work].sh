@@ -2,7 +2,7 @@
 set -e
 
 sudo apt update
-sudo apt install -y gimp inkscape podman screenkey
+sudo apt install -y gimp inkscape podman podman-compose screenkey
 #blueman
 #in blueman, change audio profile to headset head type
 

@@ -57,4 +57,4 @@ mousepad "$a".txt
 EOF
 chmod +x xfce4-screenshooter-tesseract
 sudo mv xfce4-screenshooter-tesseract $HOME/Documents/scripts/usr-local-bin
-xfconf-query -c xfce4-keyboard-shortcuts -p /commands/custom/Print -s "xfce4-screenshooter -r -o xfce4-screenshooter-tesseract"
+xfconf-query -c xfce4-keyboard-shortcuts -p /commands/custom/Print -s "xfce4-screenshooter -r -o $HOME/Documents/scripts/usr-local-bin/xfce4-screenshooter-tesseract"
