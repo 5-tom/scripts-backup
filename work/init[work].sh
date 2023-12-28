@@ -19,4 +19,16 @@ source Documents/work/scripts/npm-tools.sh
 #source Documents/work/scripts/teams.sh
 source Documents/work/scripts/vscodium.sh
 
+git config --global user.name ""
 git config --global user.email ""
+
+while read
+do
+	printf '%s\n' "$REPLY"
+done <<'EOF' >> .gitconfig
+
+[includeIf "hasconfig:remote.*.url:git@bitbucket.org:*/**"]
+[user]
+	name = 
+	email = 
+EOF
