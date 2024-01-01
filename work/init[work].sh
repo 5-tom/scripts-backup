@@ -19,8 +19,14 @@ source Documents/work/scripts/npm-tools.sh
 #source Documents/work/scripts/teams.sh
 source Documents/work/scripts/vscodium.sh
 
-git config --global user.name ""
-git config --global user.email ""
+while read
+do
+	printf '%s\n' "$REPLY"
+done <<'EOF' >> .gitconfig-bitbucket
+[user]
+	name = 
+	email = 
+EOF
 
 while read
 do
@@ -28,7 +34,5 @@ do
 done <<'EOF' >> .gitconfig
 
 [includeIf "hasconfig:remote.*.url:git@bitbucket.org:*/**"]
-[user]
-	name = 
-	email = 
+	path = .gitconfig-bitbucket
 EOF

@@ -38,6 +38,7 @@ while read
 do
 	printf '%s\n' "$REPLY"
 done <<'EOF' >> .zshrc
+alias code='/snap/bin/codium'
 alias number='khard | grep Myself'
 #alias vpn='sshuttle -r root@filmsbytom.com -x filmsbytom.com 0/0'
 alias cat='batcat --paging=never'
