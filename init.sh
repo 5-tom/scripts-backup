@@ -21,7 +21,8 @@ source Documents/scripts/mpv.sh
 source Documents/scripts/newsboat.sh
 source Documents/scripts/scrcpy.sh
 source Documents/scripts/ssh.sh
-source Documents/scripts/taskwarrior.sh
+#source Documents/scripts/taskwarrior.sh
+source Documents/scripts/todoman.sh
 source Documents/scripts/vdirsyncer.sh
 source Documents/scripts/xfce4.sh
 source Documents/scripts/yt.sh
@@ -40,6 +41,7 @@ do
 done <<'EOF' >> .zshrc
 alias code='/snap/bin/codium'
 alias number='khard | grep Myself'
+alias myself='number'
 #alias vpn='sshuttle -r root@filmsbytom.com -x filmsbytom.com 0/0'
 alias cat='batcat --paging=never'
 alias wip='curl -s https://icanhazip.com'
@@ -53,7 +55,7 @@ function getemoji() {
 }
 alias emoji="getemoji"
 alias forgot='echo "#khal new --interactive, DD-MM-YY HH:MM DD-MM-YY HH:MM
-#task add <> due:DD-MM-YY
+#todo new -l default <>
 #khard new
 #mpv --http-header-fields
 #ffmpeg -headers \"\$(cat headers)\"
