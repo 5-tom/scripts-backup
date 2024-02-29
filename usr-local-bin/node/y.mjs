@@ -1,4 +1,5 @@
-#!/usr/bin/env zx
+#!/usr/bin/env node
+import "zx/globals";
 
 async function mpva() {
 	const yn = (await $`read -ep "play with mpv? (y/n): " yn && echo -n $yn`)

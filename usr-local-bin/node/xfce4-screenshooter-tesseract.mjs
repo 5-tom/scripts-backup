@@ -1,4 +1,5 @@
-#!/usr/bin/env zx
+#!/usr/bin/env node
+import "zx/globals";
 
 // xfce4-screenshooter -r -o ./xfce4-screenshooter-tesseract.mjs
 

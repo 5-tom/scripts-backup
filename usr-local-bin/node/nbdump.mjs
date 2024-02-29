@@ -1,4 +1,5 @@
-#!/usr/bin/env zx
+#!/usr/bin/env node
+import "zx/globals";
 
 const length =
 	await $`sqlite3 $HOME/.local/share/newsboat/cache.db ".mode json" "select title,pubDate,content from rss_item where unread = 1"`.pipe(

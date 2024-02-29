@@ -1,0 +1,16 @@
+{
+	"name": "node-scripts-tom",
+	"bin": {
+		"node-adb-fix": "adb-fix.mjs",
+		"node-gdiff": "gdiff.mjs",
+		"node-kodi": "kodi.mjs",
+		"node-nbdump": "nbdump.mjs",
+		"node-play": "play.mjs",
+		"node-xfce4-screenshooter-tesseract": "xfce4-screenshooter-tesseract.mjs",
+		"node-y": "y.mjs"
+	},
+	"dependencies": {
+		"inquirer": "latest",
+		"zx": "latest"
+	}
+}

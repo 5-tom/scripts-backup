@@ -1,4 +1,5 @@
-#!/usr/bin/env zx
+#!/usr/bin/env node
+import "zx/globals";
 
 import inquirer from "inquirer";
 import { extname, basename, dirname } from "node:path";
