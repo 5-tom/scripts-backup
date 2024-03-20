@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import "zx/globals";
+import yargs from "yargs";
 
 async function mpva() {
 	const yn = (await $`read -ep "play with mpv? (y/n): " yn && echo -n $yn`)
@@ -66,6 +67,21 @@ async function channel() {
 		await mpva();
 	}
 }
+
+yargs(process.argv)
+	.option("a", {
+		describe: "download audio",
+		boolean: true
+	})
+	.option("v", {
+		describe: "download video",
+		boolean: true
+	})
+	.option("c", {
+		describe: "search for channel",
+		boolean: true
+	})
+	.parse();
 
 if (argv.a) {
 	await audio();
