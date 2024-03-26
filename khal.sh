@@ -12,6 +12,8 @@ done <<'EOF' > .config/khal/config
 [calendars]
 	[[calendar]]
 		path = ~/.local/share/khal/calendars/private/default/
+	[[holidays]]
+		path = ~/.local/share/khal/calendars/private/holidays/
 	[[birthdays]]
 		path = ~/.contacts/default/
 		type = birthdays
@@ -26,3 +28,6 @@ datetimeformat = %d-%m-%y %H:%M
 longdatetimeformat = %d-%m-%y %H:%M
 EOF
 echo "alias 6mo='khal --color list today \$(date +%d-%m-%y --date 6months) --format "{tab}{start-end-time-style}\" \"{calendar-color}{title}{nl}" 2>/dev/null | tac'" >> .zshrc
+
+#https://www.officeholidays.com/ics-all/united-kingdom
+#khal import -a holidays united-kingdom.ics --batch
