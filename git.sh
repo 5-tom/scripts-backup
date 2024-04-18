@@ -22,4 +22,7 @@ done <<'EOF' >> .gitconfig
 
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
 	path = .gitconfig-github
+
+[includeIf "hasconfig:remote.*.url:git@ssh.dev.azure.com:*/**"]
+	path = .gitconfig-github
 EOF
