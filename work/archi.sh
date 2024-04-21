@@ -21,3 +21,4 @@ sudo mv Archi /usr/local/
 sudo ln -s /usr/local/Archi/Archi /usr/local/bin/
 sudo ln -s /usr/local/Archi/Archi.desktop /usr/share/applications/
 gio trash *Archi*
+sed -i 's/^-Ddata.location.*/-Ddata.location=@user.home\/.archi/' /usr/local/Archi/Archi.ini
