@@ -4,14 +4,19 @@ cd $HOME
 
 sudo apt install -y snapd
 sudo snap install codium --classic
+/snap/bin/codium --install-extension Continue.continue --force
 /snap/bin/codium --install-extension esbenp.prettier-vscode --force
-/snap/bin/codium --install-extension moalamri.inline-fold --force
-/snap/bin/codium --install-extension humao.rest-client --force
-/snap/bin/codium --install-extension qwtel.sqlite-viewer --force
 /snap/bin/codium --install-extension pkief.material-icon-theme --force
-/snap/bin/codium --install-extension prisma.prisma --force
+
+# /snap/bin/codium --install-extension DigitalBrainstem.javascript-ejs-support --force
+# /snap/bin/codium --install-extension humao.rest-client --force
+# /snap/bin/codium --install-extension mesonbuild.mesonbuild --force
+# /snap/bin/codium --install-extension ms-dotnettools.csdevkit --force
+# /snap/bin/codium --install-extension ms-dotnettools.vscode-dotnet-runtime --force
+# /snap/bin/codium --install-extension prisma.prisma --force
+# /snap/bin/codium --install-extension qwtel.sqlite-viewer --force
+
 sudo ln -sn /var/lib/snapd/desktop/applications/codium* /usr/share/applications/
-echo "/snap/bin/codium --install-extension ow.vscode-subword-navigation-1.2.0.vsix --force"
 
 while read
 do
@@ -27,7 +32,9 @@ done <<'EOF' >> $HOME/.config/VSCodium/User/settings.json
 	"workbench.startupEditor": "none",
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"terminal.integrated.defaultLocation": "editor"
+	"terminal.integrated.defaultLocation": "editor",
+	"prettier.useTabs": true,
+	"continue.telemetryEnabled": false
 }
 EOF
 #.prettierrc:
