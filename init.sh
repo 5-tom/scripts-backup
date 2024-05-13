@@ -21,15 +21,11 @@ source Documents/scripts/todoman.sh
 source Documents/scripts/vdirsyncer.sh
 source Documents/scripts/xfce4.sh
 source Documents/scripts/yt.sh
-source Documents/scripts/zim.sh
 
-#https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
-#https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/
+#https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/
+#https://addons.mozilla.org/en-GB/firefox/addon/istilldontcareaboutcookies/
 #https://addons.mozilla.org/en-GB/firefox/addon/popup-blocker/
-#https://addons.mozilla.org/firefox/addon/libredirect/
-
-#https://randomhackernews.com/
-#https://www.pinterest.co.uk/
+#https://addons.mozilla.org/en-GB/firefox/addon/libredirect/
 
 while read
 do

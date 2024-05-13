@@ -34,10 +34,14 @@ done <<'EOF' >> $HOME/.config/VSCodium/User/settings.json
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"terminal.integrated.defaultLocation": "editor",
 	"prettier.useTabs": true,
-	"continue.telemetryEnabled": false
+	"continue.telemetryEnabled": false,
+	"continue.enableTabAutocomplete": false
 }
 EOF
 #.prettierrc:
 #{
 #	"useTabs": true
 #}
+
+mkdir -p $HOME/.continue
+cp $HOME/Documents/envs/config.json $HOME/.continue/config.json

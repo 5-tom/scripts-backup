@@ -21,4 +21,9 @@ sudo mv Archi /usr/local/
 sudo ln -s /usr/local/Archi/Archi /usr/local/bin/
 sudo ln -s /usr/local/Archi/Archi.desktop /usr/share/applications/
 gio trash *Archi*
+mkdir -p $HOME/.archi/scripts
 sed -i 's/^-Ddata.location.*/-Ddata.location=@user.home\/.archi/' /usr/local/Archi/Archi.ini
+
+cp $HOME/Documents/work/ai/jArchi_1.6.1.archiplugin .
+unzip jArchi_1.6.1.archiplugin -d $HOME/.archi/dropins/ && \
+rm $HOME/.archi/dropins/archi-plugin
