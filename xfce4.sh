@@ -2,7 +2,8 @@
 set -e
 cd $HOME
 
-sudo apt install -y xfce4-power-manager-plugins xfce4-terminal
+#xfce4-power-manager-plugins
+sudo apt install -y xfce4-terminal
 #xfce4-panel --add=power-manager-plugin &
 mkdir -p .config/xfce4/terminal
 while read

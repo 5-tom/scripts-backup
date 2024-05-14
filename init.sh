@@ -4,21 +4,25 @@ set -e
 #su
 #sudo adduser tom sudo
 sudo apt update
-sudo apt install -y bat fonts-noto-color-emoji libfuse2 libglib2.0-bin gparted qbittorrent xclip zsh
+sudo apt install -y bat fonts-noto-color-emoji gimp gparted inkscape libfuse2 libglib2.0-bin podman podman-compose qbittorrent xclip zsh
 sudo chsh -s /bin/zsh tom
 sudo update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 
 cd $HOME
 source Documents/scripts/adb.sh
+source Documents/scripts/archi.sh
+source Documents/scripts/compass.sh
 source Documents/scripts/exiftool.sh
 source Documents/scripts/git.sh
 source Documents/scripts/khal.sh
 source Documents/scripts/khard.sh
 source Documents/scripts/mousepad.sh
 source Documents/scripts/mpv.sh
+source Documents/scripts/node.sh
 source Documents/scripts/ssh.sh
 source Documents/scripts/todoman.sh
 source Documents/scripts/vdirsyncer.sh
+source Documents/scripts/vscodium.sh
 source Documents/scripts/xfce4.sh
 source Documents/scripts/yt.sh
 
