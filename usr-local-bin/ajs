@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xvfb-run Archi -application com.archimatetool.commandline.app -consoleLog -nosplash --script.runScript "$1"
