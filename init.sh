@@ -9,9 +9,11 @@ sudo chsh -s /bin/zsh tom
 sudo update-alternatives --set x-terminal-emulator /usr/bin/xfce4-terminal.wrapper
 
 cd $HOME
+source Documents/scripts/profile.sh
+source .profile
+
 source Documents/scripts/adb.sh
 source Documents/scripts/archi.sh
-source Documents/scripts/compass.sh
 source Documents/scripts/exiftool.sh
 source Documents/scripts/git.sh
 source Documents/scripts/khal.sh
