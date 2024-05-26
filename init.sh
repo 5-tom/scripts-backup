@@ -26,6 +26,7 @@ source Documents/scripts/todoman.sh
 source Documents/scripts/vdirsyncer.sh
 source Documents/scripts/vscodium.sh
 source Documents/scripts/xfce4.sh
+source Documents/scripts/jetbrains.sh
 source Documents/scripts/yt.sh
 
 #https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/
