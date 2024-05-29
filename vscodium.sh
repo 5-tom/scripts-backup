@@ -7,6 +7,7 @@ sudo snap install codium --classic
 /snap/bin/codium --install-extension Continue.continue --force
 /snap/bin/codium --install-extension esbenp.prettier-vscode --force
 /snap/bin/codium --install-extension pkief.material-icon-theme --force
+/snap/bin/codium --install-extension bradlc.vscode-tailwindcss --force
 
 # /snap/bin/codium --install-extension DigitalBrainstem.javascript-ejs-support --force
 # /snap/bin/codium --install-extension humao.rest-client --force
@@ -32,7 +33,8 @@ done <<'EOF' >> $HOME/.config/VSCodium/User/settings.json
 	"terminal.integrated.defaultLocation": "editor",
 	"prettier.useTabs": true,
 	"continue.telemetryEnabled": false,
-	"continue.enableTabAutocomplete": false
+	"continue.enableTabAutocomplete": false,
+	"editor.fontFamily": "'JetBrains Mono Medium', 'Droid Sans Mono', 'monospace', monospace"
 }
 EOF
 #.prettierrc:

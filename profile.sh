@@ -13,8 +13,8 @@ export XDG_STATE_HOME="$HOME"/.local/state
 
 alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
 
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 # don't work:
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 EOF
@@ -30,8 +30,8 @@ export XDG_STATE_HOME="$HOME"/.local/state
 
 alias wget='wget --hsts-file="$XDG_CACHE_HOME"/wget-hsts'
 
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 # don't work:
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 EOF
