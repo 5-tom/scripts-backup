@@ -1,0 +1,5 @@
+#!/bin/bash
+
+key=$(ls $HOME/Documents/work/service_account_keys | fzf)
+export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/Documents/work/service_account_keys/${key}
+zsh

@@ -2,6 +2,7 @@
 set -e
 cd $HOME
 
+mkdir -p /home/tom/.local/share/khal/calendars/private/todoman
 ln -s $HOME/Documents/dottodoman $HOME/.config/todoman
 sudo apt install -y pipx
 pipx install todoman

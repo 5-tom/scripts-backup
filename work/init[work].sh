@@ -2,6 +2,8 @@
 set -e
 cd $HOME
 
+ln -s $HOME/Documents/work/scripts/usr-local-bin/* Documents/scripts/usr-local-bin/
+
 source Documents/work/scripts/chrome.sh
 #source Documents/work/scripts/dotnet.sh
 source Documents/work/scripts/npm-tools.sh
