@@ -4,6 +4,7 @@ cd $HOME
 
 wget https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
 unzip JetBrainsMono-2.304.zip -d JetBrainsMono-2304
+mkdir -p "$XDG_DATA_HOME"/fonts
 cp -n JetBrainsMono-2304/fonts/ttf/* "$XDG_DATA_HOME"/fonts
 #sudo cp JetBrainsMono-2304/fonts/ttf/* /usr/local/share/fonts/
 gio trash JetBrainsMono-2304

@@ -13,11 +13,8 @@ logs-dir=${XDG_STATE_HOME}/npm/logs
 EOF
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-source "$HOME/.nvm/nvm.sh"
+source "$HOME/.config/nvm/nvm.sh"
 nvm install node
-
-mv "$HOME/.nvm" "$XDG_DATA_HOME/nvm"
-gio trash "$HOME/.npm"
 
 sed -i 's/export NVM_DIR="$HOME\/.nvm"/export NVM_DIR="$XDG_DATA_HOME\/nvm"/' .zshrc
 

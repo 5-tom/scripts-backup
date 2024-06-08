@@ -6,7 +6,6 @@ sudo apt install -y git meld
 
 mkdir -p "$XDG_CONFIG_HOME/git"
 touch "$XDG_CONFIG_HOME/git/config"
-gio trash .gitconfig
 
 git config --global user.name ""
 git config --global user.email ""
