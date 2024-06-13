@@ -8,6 +8,8 @@ sudo snap install codium --classic
 /snap/bin/codium --install-extension esbenp.prettier-vscode --force
 /snap/bin/codium --install-extension pkief.material-icon-theme --force
 /snap/bin/codium --install-extension bradlc.vscode-tailwindcss --force
+/snap/bin/codium --install-extension wix.vscode-import-cost --force
+/snap/bin/codium --install-extension antfu.unocss --force
 
 # /snap/bin/codium --install-extension DigitalBrainstem.javascript-ejs-support --force
 # /snap/bin/codium --install-extension humao.rest-client --force

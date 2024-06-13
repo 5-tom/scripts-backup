@@ -34,6 +34,18 @@ source Documents/scripts/yt.sh
 #https://addons.mozilla.org/en-GB/firefox/addon/popup-blocker/
 #https://addons.mozilla.org/en-GB/firefox/addon/libredirect/
 
+#https://mataroa.blog/dashboard/
+#https://letterboxd.com/tom_5/list/seen/
+#linkedin links
+
+echo "Defaults !admin_flag" | sudo tee /etc/sudoers.d/disable_admin_file_in_home
+
+mkdir -p $XDG_CACHE_HOME/X11
+#doesn't work:
+sudo sed -i 's/$HOME\/\./$XDG_CACHE_HOME\/X11\//' /etc/X11/Xsession
+
+mkdir -p $XDG_CACHE_HOME/zsh
+
 while read
 do
 	printf '%s\n' "$REPLY"
@@ -55,6 +67,10 @@ autoload -Uz promptinit
 promptinit
 prompt adam1
 
+#https://zsh.sourceforge.io/Doc/Release/Completion-System.html
+autoload -Uz compinit
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+
 #https://zsh.sourceforge.io/Doc/Release/Options.html
 setopt histignorealldups sharehistory
 
@@ -64,3 +80,8 @@ HISTFILE=~/.zsh_history
 
 export PATH=/home/tom/Documents/scripts/usr-local-bin:$PATH
 EOF
+
+gio trash $HOME/.sudo_as_admin_successful
+gio trash $HOME/.face
+gio trash $HOME/.face.icon
+gio trash $HOME/.wget-hsts
