@@ -36,7 +36,9 @@ done <<'EOF' >> $HOME/.config/VSCodium/User/settings.json
 	"prettier.useTabs": true,
 	"continue.telemetryEnabled": false,
 	"continue.enableTabAutocomplete": false,
-	"editor.fontFamily": "'JetBrains Mono Medium', 'Droid Sans Mono', 'monospace', monospace"
+	"editor.fontFamily": "'JetBrains Mono Medium', 'Droid Sans Mono', 'monospace', monospace",
+	"typescript.suggest.autoImports": false,
+	"javascript.suggest.autoImports": false
 }
 EOF
 #.prettierrc:

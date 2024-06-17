@@ -37,6 +37,7 @@ source Documents/scripts/yt.sh
 #https://mataroa.blog/dashboard/
 #https://letterboxd.com/tom_5/list/seen/
 #linkedin links
+#https://news.ycombinator.com/
 
 echo "Defaults !admin_flag" | sudo tee /etc/sudoers.d/disable_admin_file_in_home
 
