@@ -23,3 +23,5 @@ echo 'export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc' >> "$HOME/.zshr
 
 echo 'export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history' >> "$HOME/.profile"
 echo 'export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history' >> "$HOME/.zshrc"
+
+npm i -g @orangeopensource/hurl

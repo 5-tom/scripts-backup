@@ -12,7 +12,6 @@ sudo snap install codium --classic
 /snap/bin/codium --install-extension antfu.unocss --force
 
 # /snap/bin/codium --install-extension DigitalBrainstem.javascript-ejs-support --force
-# /snap/bin/codium --install-extension humao.rest-client --force
 # /snap/bin/codium --install-extension mesonbuild.mesonbuild --force
 # /snap/bin/codium --install-extension qwtel.sqlite-viewer --force
 
@@ -37,8 +36,8 @@ done <<'EOF' >> $HOME/.config/VSCodium/User/settings.json
 	"continue.telemetryEnabled": false,
 	"continue.enableTabAutocomplete": false,
 	"editor.fontFamily": "'JetBrains Mono Medium', 'Droid Sans Mono', 'monospace', monospace",
-	"typescript.suggest.autoImports": false,
-	"javascript.suggest.autoImports": false
+	"javascript.suggest.autoImports": false,
+	"typescript.suggest.autoImports": false
 }
 EOF
 #.prettierrc:
